@@ -7,6 +7,8 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body,
@@ -32,4 +34,23 @@ ul {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.heading{
+  text-align: center;
+  margin-top: 1rem ;
+
+}
+.container{
+  max-width: 1400px;
+  width: 100%;
+  margin: 1rem auto;
+}
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.box{
+  border: 1px solid black;
 }
