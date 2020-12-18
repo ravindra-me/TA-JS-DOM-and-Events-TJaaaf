@@ -1,25 +1,27 @@
 
 let first = document.querySelector('.first-box');
 let second = document.querySelector('.second-box');
-function colorGenerator1(){
-    let colorCodes = 'abcdef123456789ABCDEF';
+
+function coloGenerator(){
+    let colorCodes = 'abcdef123456789';
     let color=''
     for(let i=1 ; i<=6;i++){
         let colorCode = colorCodes[Math.floor(Math.random() * colorCodes.length)]
         color+=colorCode;
     }
-    first.style.backgroundColor = `#${color}`
-    console.log(color);
+    return `#${color}`;
 }
+
+
+function colorGenerator1(){
+    let randomColor = coloGenerator(); 
+    first.style.backgroundColor = randomColor;
+}
+
+
 function colorGenerator2(){
-    let colorCodes = 'abcdef123456789ABCDEF';
-    let color=''
-    for(let i=1 ; i<=6;i++){
-        let colorCode = colorCodes[Math.floor(Math.random() * colorCodes.length)]
-        color+=colorCode;
-    }
-    second.style.backgroundColor = `#${color}`
-    console.log(color);
+    let randomColor = coloGenerator();
+    second.style.backgroundColor = randomColor;
 }
 first.addEventListener('click' , colorGenerator1);
 second.addEventListener('mousemove' , colorGenerator2);
