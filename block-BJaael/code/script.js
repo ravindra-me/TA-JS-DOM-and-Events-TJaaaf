@@ -1,5 +1,6 @@
 let container  = document.querySelector('.container');
 
+// create boxes
 for(i=1 ; i<=500; i++){
     let div = document.createElement('div');
     div.classList.add("box");
@@ -10,8 +11,11 @@ for(i=1 ; i<=500; i++){
 
 let boxs = document.querySelectorAll('.box');
 
+// boxes innerText 
 boxs.forEach(e=> e.innerHTML = Math.floor(Math.random()*500))
 
+
+// create hex colorCode
 function colorGenerator(){
     let color = '';
     let colorCodes = "abcdef123456789ABCDEF"
@@ -22,6 +26,8 @@ function colorGenerator(){
     console.log(color)
     return `#${color}`
 }
+
+// create color nad number
 
 function randomColorNumber(){
     let randomBox = boxs.forEach(e=>{
@@ -34,5 +40,6 @@ function randomColorNumber(){
     return randomBox
 }
 
+// apply addEventListener in container
 container.addEventListener('mousemove' , randomColorNumber)
 
