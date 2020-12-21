@@ -1,0 +1,173 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+*, *::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container{
+    max-width:450px;
+    width: 100%;
+    margin: 0 auto;
+   
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.input-box{
+    width: 100%;
+}
+.input-box input{
+    width: 100%;
+}
+.btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex{
+    display: flex;
+}
+.justify-center{
+    justify-content: center;
+}
+.align-center{
+    align-items: center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.flex-direction{
+    flex-direction: column;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.heading{
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+.btn{
+    flex: 0 1 21.8%;
+    background: green;
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.25rem;
+    margin-bottom: 0.3rem;
+    font-size: 2rem;
+    background-color: #c5a880;
+}
+.number{
+    flex: 0 1 29%;
+    font-size: 2rem;
+    padding: 0.5rem 2rem;
+    background-color: #e6e6e6;
+    margin-bottom: 0.8rem;
+    border-radius: 0.25rem;
+}
+.width-100{
+    width: 100%;
+}
+.flex-75{
+    flex: 0 1 74%;
+}
+.flex-25{
+    flex: 0 1 22%;
+}
+
+.container-number{
+    text-align: center;
+    margin: 0.5rem 0;
+}
+.plus{
+    flex: 0 1 22%;
+    background: green;
+    border-radius: 0.25rem;
+    margin-bottom: 0.8rem;
+    align-items: stretch;
+    text-align: center;
+    font-size: 2rem;
+    background-color: #41584b;
+    color: white;
+    align-items: center;
+}
+.input{
+    text-align: right;
+    background-color: black;
+    color: white;
+    padding: 0.8rem 1rem;
+    font-size: 3rem;
+    border-radius: 1rem;
+    margin: 1rem 0;
+}
+p{
+    padding: 0.2rem 0;
+}
+.clear{
+    background-color: #532e1c;
+    color: white;
+    font-size: 2rem;
+    flex: 0 1 29%;
+    font-size: 2rem;
+    padding: 0.5rem 2rem;
+    margin-bottom: 0.8rem;
+    border-radius: 0.25rem;
+}
