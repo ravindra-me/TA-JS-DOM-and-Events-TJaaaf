@@ -1,0 +1,143 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700;800;900&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+*,*::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding-right: 0;
+}
+body{
+width: 100vw;
+height: 100vh;
+display: flex;
+justify-content: center;
+background-color: #e7e7de;
+align-items: center;
+font-family: 'Roboto Slab', serif;
+flex-direction: column;
+}
+.container{
+    max-width: 700px;
+    width: 100%;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-heading{
+    font-size: 3.8rem;
+    font-weight: 900;
+    margin-bottom: 4rem;
+    color: #00587a;
+    text-shadow: 3px 10px 10px rgba(0, 0, 0, 0.34);
+}
+
+
+.player{
+    background-color: #0f3057;
+    text-align: center;
+    padding: 2rem;
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12)
+      ;
+      border-radius: 2rem;
+}
+.player-logo{
+    margin-bottom: 1.5rem;
+    margin: 1rem 0 2.5rem 0;
+    font-size: 2rem;
+    font-weight: 900;
+    color: white;
+
+}
+.player-logo span{
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.2rem;
+    box-shadow: 1px 2px 10px 5px rgba(0, 0, 0, 0.5);
+}
+.show-name{
+    font-size:2rem;
+    font-weight: 700;
+    color: white;
+}
+
+.logo{
+    font-size: 2.5rem;
+    margin: 2rem 1rem;
+    color: white;
+
+}
+.logo i{
+    display: inline-block;
+    margin-right: 1rem;
+    color: #e7e7de;
+    font-size: 3.5rem;
+}
+.heading{
+    color:white;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.show-result{
+    font-size: 3rem;
+    margin-top: 5rem;
+}
+.show-result{
+    background-color: rgb(204, 208, 209);
+    padding:0.5rem  1rem ;
+}

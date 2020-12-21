@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper and Scissors</title>
+    <script src="https://kit.fontawesome.com/379acff5c7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <h1 class="main-heading">Rock Paper and Scissor</h1>
+    <div class="container flex">
+      <div class="player">
+        <h2 class="player-logo"><span>Player</span></h2>
+        <h2 class="show-name show-name-player">Rock</h2>
+        <div class="logo player-logo-box">
+          <!-- Rock -->
+          <i class="fa fa-hand-rock-o" aria-hidden="true" data-text="Rock"></i>
+
+          <!-- Paper -->
+          <i class="fa fa-hand-paper-o" aria-hidden="true" data-text="Paper"></i>
+
+          <!-- Scissors -->
+          <i class="fa fa-hand-scissors-o" aria-hidden="true" data-text="Scissor"></i>
+        </div>
+        <h2 class="heading">Score: <span class="player-score"></span></h2>
+      </div>
+      <div class="player">
+        <h2 class="player-logo"><span>Computer</span></h2>
+        <h2 class="show-name show-name-computer">Rock</h2>
+        <div class="logo computer-logo">
+          <!-- Rock -->
+          <i class="fa fa-hand-rock-o" aria-hidden="true"></i>
+
+          <!-- Paper -->
+          <i class="fa fa-hand-paper-o" aria-hidden="true"></i>
+
+          <!-- Scissors -->
+          <i class="fa fa-hand-scissors-o" aria-hidden="true"></i>
+        </div>
+        <h2 class="heading">Score: <span class="computer-score"></span></h2>
+      </div>
+    </div>
+    <h1 class="show-result"> <span>please start game</span></h1>
+    <script src="./script.js"></script>
+  </body>
+</html>
