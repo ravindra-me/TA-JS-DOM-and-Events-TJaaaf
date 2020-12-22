@@ -1,5 +1,7 @@
 let form  = document.querySelector('form');
-let main = document.querySelector('.main')
+let main = document.querySelector('.main');
+let modelLay = document.querySelector('.over-lay');
+
 {/* <div class="container">
         <a href="#" class="click">Click</a>
         <div>
@@ -12,34 +14,34 @@ let main = document.querySelector('.main')
           <p>You agree to Terms and Condition</p>
         </div>
       </div> */}
-
-let arr = [];
 let obj = {};
 
-function createContainer(name , email, gender , color, rating,fiction, check) {
+function createContainer(obj) {
+  modelLay.innerHTML = ""
     let div = document.createElement('div');
     div.classList.add("container");
     let a = document.createElement('a');
+    a.setAttribute("href" ,"#")
     a.classList.add("click")
     a.innerText = `Click`
     let div2 = document.createElement('div');
     let h2 = document.createElement("h2")
-    h2.innerText = `${name}`
+    h2.innerText = `${obj.name}`
     let emailP = document.createElement('p')
-    emailP.innerText = `Email: ${email}`
+    emailP.innerText = `Email: ${obj.email}`
     let moviesP = document.createElement("p");
-    moviesP.innerText = `Yor Lov: ${gender}`;
+    moviesP.innerText = `Yor Lov: ${obj.gender}`;
     let colorP = document.createElement("p");
-    colorP.innerText = `color: ${color}`
+    colorP.innerText = `color: ${obj.color}`
     let ratingP = document.createElement("p");
-    ratingP.innerText = `Rating: ${rating}`
+    ratingP.innerText = `Rating: ${obj.rating}`
     let bookGenreP = document.createElement("p")
-    bookGenreP.innerText = `${fiction} ${color}`
+    bookGenreP.innerText = `${obj.fiction} ${obj.color}`
     let agreeA = document.createElement("a");
-    agreeA.innerText = `You agree to Terms and Condition`
-    div2.append(emailP,moviesP,colorP,ratingP,bookGenreP,agreeA)
+    agreeA.innerText = `${obj.terms === true ? 'You agree to Terms and Condition' : 'You do not agree to terms and condition '}`
+    div2.append(h2,emailP,moviesP,colorP,ratingP,bookGenreP,agreeA)
     div.append(a,div2)
-    main.append(div);
+    modelLay.append(div);
 }
 
 
@@ -52,7 +54,7 @@ function heandelerFunction(event){
     let color = form.color.value;
     let rating = form.range.value;
     let fiction  = form.drone.value;
-    let check = form.terms;
+    let check = form.terms.checked;
     console.log(check)
     obj.name  = name;
     obj.email = email;
@@ -60,9 +62,15 @@ function heandelerFunction(event){
     obj.color = color;
     obj.rating = rating;
     obj.fiction = fiction;
+    obj.terms = check;
     obj["data-id"] = new Date();
-    arr.push(obj);
-    createContainer(name, email, gender, color, rating, fiction, check);
+    createContainer(obj);
+    
+    modelLay.classList.remove("close");
+    let btn = document.querySelector(".click");
+    btn.addEventListener("click" , ()=>{
+    modelLay.classList.add("close");
+})
 }
 
 
