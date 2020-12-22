@@ -91,3 +91,10 @@ input[type='text'] {
 .terms {
   display: inline-block;
 }
+
+/* click */
+.click{
+  text-align: end;
+  text-decoration: none;
+  color: lightgray;
+}
