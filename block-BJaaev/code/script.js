@@ -1,4 +1,4 @@
-function main() {
+
 let input =  document.querySelector('.input');
 let todoList = document.querySelector('.todo-list');
 let all = document.querySelector(".all")
@@ -6,7 +6,7 @@ let active = document.querySelector(".active");
 let completed = document.querySelector(".completed");
 let numberItem = document.querySelector(".no-item");
 let clearCompletly = document.querySelector(".clear");
-let todoArr = JSON.parse(localStorage.getItem("todos"));
+let todoArr = JSON.parse(localStorage.getItem("todos")) || [];
 
 function inputHandler(event) {
     let inputValue = event.target.value;
@@ -47,6 +47,12 @@ function createTodo(arr) {
        let p = document.createElement("p");
        p.innerText = `${element.text}`
        p.classList.add("text")
+       
+       if(element.checked === true) {
+           p.classList.add("line-through")
+           checkDiv.classList.add("background-img");
+       }
+
        let button = document.createElement('button');
        button.innerText = "❌"
        button.classList.add('delete-btn');
@@ -76,15 +82,16 @@ function createTodo(arr) {
     //    check todo it completted or not
        checkDiv.addEventListener("click" , (event) => {
            element.checked = !element.checked;
+           localStorage.setItem("todos" , JSON.stringify(todoArr))
            if(element.checked == true) {
                event.target.classList.add("background-img");
                p.classList.add("line-through");
+               console.log(todoArr)
            }else{
             event.target.classList.remove("background-img");
             p.classList.remove("line-through");
            }
        })
-
     });
 }
 
@@ -92,17 +99,20 @@ function createTodo(arr) {
 
 active.addEventListener("click" , (event) => {
     let activeTodo = todoArr.filter(element => element.checked === false);
-    numberItem.innerText =activeTodo.length;
+    createTodo(activeTodo);
+    numberItem.innerText = activeTodo.length;
 })
 
 
 // check 
 completed.addEventListener("click" , (event) => {
     let completeTodo = todoArr.filter(element => element.checked === true);
+    createTodo(completeTodo);
     numberItem.innerText =completeTodo.length;
 })
 
 all.addEventListener("click" , (event) => {
+    createTodo(todoArr)
     numberItem.innerText = todoArr.length;
 })
 
@@ -116,6 +126,3 @@ clearCompletly.addEventListener("click" , ()=>{
 createTodo(todoArr)
 
 input.addEventListener('keyup' , inputHandler)
-}
-
-main();
