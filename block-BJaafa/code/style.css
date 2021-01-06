@@ -1,0 +1,480 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+html{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+
+}
+*, *::before, *::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url(../asert/img/bodybg5.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    line-height: 1.5;
+    background-attachment: fixed;
+}
+
+.container{
+    max-width: 100vw;
+    width: 100%;
+    margin: 0 auto;
+}
+.flex{
+    display: flex;
+}
+.justify-center{
+    justify-content: center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.justify-end{
+    justify-content: flex-end;
+}
+.justify-start{
+    justify-content: flex-start;
+}
+.justify-space-arround{
+    justify-content: space-around;
+}
+.align-center{
+    align-items: center;
+}
+.align-start{
+    align-items: flex-start;
+}
+.align-end{
+    align-items: flex-end;
+}
+.flex-column{
+    flex-direction: column;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.full-width{
+    width: 100%;
+}
+.padding{
+    padding: 2rem 0;
+}
+.primary-heading{
+    font-size: 5rem;
+   font-weight: 600;
+   letter-spacing: 0.5rem;
+   word-spacing: 0.25rem;
+}
+.seondary-heading{
+    font-size: 2rem;
+}
+.text{
+    font-size: 2rem;
+}
+
+.header{
+    padding: 2rem;
+}
+
+
+/* geating box */ 
+.geating-box .primary-heading{
+    font-size: 4rem;
+    background: -webkit-linear-gradient(white, rgb(238, 12, 102));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px #d8252560; 
+}
+
+
+.setting-btn{
+    font-size: 3rem;
+    cursor: pointer;
+    position: absolute;
+    z-index: 200;
+}
+.time{
+    font-size: 3.5rem;
+    font-weight: 600;
+    display: block;
+    margin-top: 2rem;
+}
+.date{
+    display: block;
+    font-size: 2rem;
+    font-weight: 900;
+    margin-top: 1rem;
+}
+.todo-container{
+    position: absolute;
+    width: 100%;
+    top:25%;
+}
+.time-am-pm{
+    font-size: 2.5rem;
+}
+.todo{
+    width: 30%;
+}
+.todo .seondary-heading{
+    font-weight: 800;
+    font-size: 3rem;
+    text-shadow: 2px 5px #d8252560; 
+}
+.todo .text{
+    font-size: 1.5rem;
+}
+.input{
+    display: block;
+    width: 80%;
+    padding: 0.6rem 1rem;
+    border: none;
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    border-radius: 0.45rem;
+    
+}
+.list{
+    width: 80%;
+    background-color: black;
+    border-radius: 0.45rem;
+}
+.list-item{
+    background-color: white;
+    color: black;
+    padding: 0.2rem .5rem;
+    margin-bottom: 0.25rem;
+    border-radius: 0.45rem;
+}
+.check-btn{
+    display: block;
+    width: 30px ;
+    height: 30px;
+    border:2px solid black;
+}
+.line-through{
+    text-decoration: line-through;
+}
+.delete-btn{
+    font-size: 2rem;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: transform 0.1s;
+}
+.delete-btn:hover{
+    opacity: 1;
+    transform: scale(1.5);
+}
+.todo-footer{
+    background-color: white;
+    width: 80%;
+    color: black;
+    padding: 0.5rem 0.5rem;
+    font-size: 1rem;
+}
+.todo-function span{
+    margin: 0 .15rem;
+    cursor: pointer;
+}
+.all{
+    border: 1px solid lightcoral;
+    padding: 0.15rem ;
+    border-radius: 0.25rem;
+}
+.qutoes{
+    display: none;
+    width: 24%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    padding: 1rem;
+    border-radius: 0.85rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow:2px 3px 5px 5px rgba(0, 0, 0, 0.3);
+}
+.qutoes h2{
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.qutoes h2 span{
+    font-size: 2rem;
+    margin-top: 0;
+    padding: 0.5rem;
+}
+
+.qutoes .writer{
+    text-align: end;
+}
+.qutoes .text{
+    font-size: 1.6rem;
+}
+
+/* display none for qutation and todo */
+.display-none{
+    display: none;
+}
+
+
+/* footer */
+.footer-nav{
+    width: 80%;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 10px;
+    border-radius: 0.5rem;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+    margin: 0 1rem;
+    font-size: 2rem;
+}
+
+
+/* setting box */
+.setting-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: none;
+    right: 0;
+    background: rgba(0, 0, 0, 0.74);
+    z-index: 10;
+    left: 0;
+    border-radius: 20px;
+
+}
+.setting-container main{
+    width: 75%;
+    margin: auto;
+    background-color: white;
+    border-radius: 20px;
+    padding: 2rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% ,-50%);
+}
+.aside{
+    background-color: lightblue;
+    color: black;
+    width: 35%;
+    border-radius: 20px;
+    justify-content: flex-start;
+    padding: 20px;
+    box-shadow: 2px 5px 2px 2px rgba(0, 0, 0, 0.24), inset 0 2px 3px 5px rgba(0, 0, 0, 0.048);
+}
+.aside .btn {
+    background-color:#11698e;
+    padding: 10px;
+    color: white;
+    box-shadow: 0 1px 2px 3px rgba(0, 0, 0, 0.28), inset -1px -2px 3px 2px rgba(0, 0, 0, 0.02);
+    font-size: 1.5rem;
+    width: 95%;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 0.5rem;
+}
+.setting-container section{
+    width: 60%;
+    position: relative;
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 5px 2px 2px rgba(0, 0, 0, 0.24), inset 0 2px 3px 5px rgba(0, 0, 0, 0.048);
+}
+.action-box{
+    background-color:#b594bd;
+    box-shadow: 0 1px 2px 3px rgba(0, 0, 0, 0.28), inset -1px -2px 3px 2px rgba(0, 0, 0, 0.02);
+    padding: 15px;
+    margin-top: 1rem;
+    border-radius: 20px;
+}
+/* .timezone label{
+    width: 50px;
+    height: 32px;
+    background-color: white;
+    padding: 0.25rem 0;
+    display: block;
+} */
+.action-btn{
+    width: 30px;
+    display: block;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+}
+.aside .qutoes-btn{
+    margin-top: 2rem;
+}
+.qutoesBox{
+    margin-top: 2rem;
+}
+.aside .add-links{
+    margin-top: 5.5rem;
+}
+.form{
+    margin-top: 2rem;
+    padding-top: 0;
+
+}
+.form input{
+    flex:0 1 40%;
+    display: block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    outline: none;
+}
+
+.aside .set-todo{
+    margin-top: 5.5rem;
+}
+.todoBox{
+    margin-top: 3rem;
+}
+
+.aside .set-name{
+    margin-top: 4rem;
+}
+.add-name{
+    width: 50%;
+    border-radius: 0.45rem;
+    padding:1.3rem 1rem;
+    display: block;
+    font-size: 1.2rem;
+}
+.nameBox{
+    margin-top: 3rem;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+
+/* toogle btn */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 28px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(50px);
+    transform: translateX(50px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .img-logo{
+      width: 40px;
+      height: 40px;
+  }
+  .qutoes-img{
+      width: 20px;
+      height: 20px;
+  }
