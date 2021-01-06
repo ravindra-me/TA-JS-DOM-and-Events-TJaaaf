@@ -175,6 +175,9 @@ body{
     font-size: 3rem;
     text-shadow: 2px 5px #d8252560; 
 }
+.todo .text{
+    font-size: 1.5rem;
+}
 .input{
     display: block;
     width: 80%;
