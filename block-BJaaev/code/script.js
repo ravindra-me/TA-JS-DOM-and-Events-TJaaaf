@@ -45,6 +45,7 @@ function createTodo(arr) {
        let editInput = document.createElement('input')
        editInput.classList.add("edit-text", "display-none");
        let p = document.createElement("p");
+       p.setAttribute("data-id" ,index);
        p.innerText = `${element.text}`
        p.classList.add("text")
        
@@ -67,12 +68,15 @@ function createTodo(arr) {
       
     // text editing
        p.addEventListener("dblclick" , (event) =>{
+           let testId = event.target.dataset.id;
            p.classList.add("display-none");
           editInput.classList.remove("display-none")
           editInput.addEventListener("keyup", (event) => {
             if(event.keyCode === 13){
                 console.log(event.target.value)
-                p.innerText = event.target.value;
+                todoArr[testId].text =  event.target.value;
+                createTodo(todoArr)
+                localStorage.setItem("todos" , JSON.stringify(todoArr))
                 p.classList.remove("display-none")
                 editInput.classList.add("display-none");
             }
